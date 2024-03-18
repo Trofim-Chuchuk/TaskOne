@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskOne", "TaskOne\TaskOne.csproj", "{34690284-E9E7-43EC-8089-0A49F740EED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskOneTest", "TaskOneTest\TaskOneTest.csproj", "{0587609B-6F02-49F7-9CBF-9659782819B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34690284-E9E7-43EC-8089-0A49F740EED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34690284-E9E7-43EC-8089-0A49F740EED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34690284-E9E7-43EC-8089-0A49F740EED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34690284-E9E7-43EC-8089-0A49F740EED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0587609B-6F02-49F7-9CBF-9659782819B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0587609B-6F02-49F7-9CBF-9659782819B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0587609B-6F02-49F7-9CBF-9659782819B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0587609B-6F02-49F7-9CBF-9659782819B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

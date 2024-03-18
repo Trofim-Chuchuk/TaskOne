@@ -1,0 +1,21 @@
+Any software developer should be used to having to learn new libraries or languages,
+but for me, it’s been a bit extreme. I stopped coding in 1988 when I went into technical
+management, and I didn’t come back to coding until 2009—that’s a 21-year gap. To say
+that the landscape had changed is an understatement; I felt like a child on Christmas
+morning with so many lovely presents I couldn’t take it all in.
+I made all the rookie mistakes at the beginning, like thinking object-oriented programming was about using inheritance, which it isn’t. But I learned the new syntax, new
+tools (wow!), and reveled in the amount of information I could get online. I chose to
+focus on Microsoft’s stack, mainly because of the wealth of documentation available.
+That was a good choice at the time, but now with .NET Core and its open source, multiplatform approach, it turns out to be an excellent choice.
+The first applications I worked on in 2009 were ones that optimized and displayed
+healthcare needs geographically, especially around where to locate treatment centers.
+That required complex math (which my wife provided) and serious database work. I
+went through ADO.NET, LINQ to SQL, and then in 2013 I swapped to Entity Framework (EF), when EF 5 supported SQL’s spatial (geographical) types.
+Over the intervening years, I used EF a lot and have come to know EF6.x well. I’ve
+written extensively on EF in my own blog (www.thereformedprogrammer.net/) and
+on the Simple Talk site (www.simple-talk.com/author/jon-smith/). It turns out I
+like taking complex software ideas and trying to make them easy for other people to
+understand. So, when Manning Publications approached me to write a book on Entity
+Framework Core (EF Core), I said yes.
+Entity Framework Core in Action covers all the features of EF Core 2.0, with plenty of
+examples and lots of code you can run. I’ve also included numerous patterns and

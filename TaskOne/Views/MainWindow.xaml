@@ -1,0 +1,62 @@
+<Window x:Class="TaskOne.Views.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vn="clr-namespace:TaskOne.ViewModels"
+             xmlns:fa="http://schemas.fontawesome.com/icons/"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Window.Resources>
+        <vn:MainWindowViewModel x:Key="ViewModel" />
+    </Window.Resources>
+    <Grid  DataContext="{Binding Source={StaticResource ViewModel }}">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button 
+                FontSize="20"
+                Command="{Binding OpenTxt}">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Regular_File" Foreground="Cornsilk"/>
+            </Button.Content>
+        </Button>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+        <TextBlock  Text="{Binding TextFromFolder}" 
+                    TextWrapping="Wrap"
+                    Width="Auto"
+                    Height="Auto"
+                    FontSize="20"/>
+            </ScrollViewer>
+        <StackPanel Background="Linen" Grid.Column="1">
+            <TextBlock Margin="5,5,5,5"  
+                       TextWrapping="Wrap" 
+                       Text="Введите сколько минимально букв должно быть в слове (остальные  будут убраны)"/>
+            <TextBlock Margin="5,5,5,5"  
+                       TextWrapping="Wrap" 
+                       Text="Если нужно убрать только знаки припинания введите ноль"/>
+            <TextBox HorizontalAlignment="Left" 
+                     Width="50"  
+                     Margin="5,5,5,5" 
+                     Text="{Binding NumberOfLetters}"/>
+            <Button Content="Убрать слова и знаки припинания" 
+                    Command="{Binding RemoveLetter }"/>
+            <Button Content="Очистить." 
+                    Command="{Binding ClearFile }"/>
+           
+        </StackPanel>
+        <Button Grid.Column="2"
+                Command="{Binding SaveTxt}" >
+            <Button.Content>
+                <fa:ImageAwesome Icon="Regular_Save" Foreground="Cornsilk"/>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>
