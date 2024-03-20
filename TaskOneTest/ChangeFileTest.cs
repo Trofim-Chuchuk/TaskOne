@@ -1,11 +1,11 @@
 using TaskOne.Services;
 namespace TaskOneTest;
 
-public class UnitTest1 {
+public class ChangeFileTest {
 
    private readonly ChangeFile _changeFile;
    
-   public UnitTest1()
+   public ChangeFileTest()
    {
        _changeFile = new ChangeFile();
    }
@@ -23,7 +23,22 @@ public class UnitTest1 {
 
        // Act
        var result = _changeFile.RemoveLetter(input, minWordLength);
+       // Assert
+       Assert.Equal(expected, result);
+   }
+   
+   [Theory]
+   [InlineData("Hello world!",  "Hello world")]
+   [InlineData("This, is, a, test,",  "This is a test")]
+   [InlineData("One",  "One")]
+   [InlineData("",  "")]
+   [InlineData("Test,,,,",  "Test")]
+   public void RemoveSings(string input, string expected)
+   {
+       // Arrange
 
+       // Act
+       var result = _changeFile.RemoveSigns(input);
        // Assert
        Assert.Equal(expected, result);
    }
@@ -33,9 +48,21 @@ public class UnitTest1 {
    {
        // Arrange
        string input = null;
-
        // Act
        var result = _changeFile.RemoveLetter(input, 5);
+
+       // Assert
+       Assert.Equal(" ", result);
+   }
+   [Fact]
+   public void RemoveLetter_NullInput_NullValue()
+   {
+       // Arrange
+       string input = null;
+       int value = 0;
+
+       // Act
+       var result = _changeFile.RemoveLetter(input, value);
 
        // Assert
        Assert.Equal(" ", result);
